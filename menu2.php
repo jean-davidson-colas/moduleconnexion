@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
 
 <nav>        
-    <div class="gradient2">
+    <div class="gradient6">
         <ul>
             <li><a href="index.php">Accueil</a></li>
             <li><a href="Inscription.php">Inscription</a></li>
@@ -27,14 +27,13 @@
             }
             ?>
 
-            <form  method = "POST" action= "index.php">
+            <form  method = "POST" action= "">
                 <input  name = "Dec" value = "Deconnexion" type = 'submit' />
             </form>
             <?php if(isset ($_POST['Dec']))
             {
-                header('location : index.php');
                 session_destroy();
-                
+                header('location : index.php');
             }?>
 
 

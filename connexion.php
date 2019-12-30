@@ -9,7 +9,7 @@ if (isset($_POST["submit"])) {
   $query = mysqli_query($connexion, $requete2);
   $resultat = mysqli_fetch_row($query);
 
-  var_dump($resultat);
+  
 
   if (password_verify($_POST['password'], $resultat[0])) {
     $_SESSION['login'] = $_POST['login'];
@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
   }
   
   else {
-    echo "mauvais password";
+    echo "<h2>Mauvais password Saisir a nouveau</h2>";
   }
 }
 ?>
@@ -27,28 +27,40 @@ if (isset($_POST["submit"])) {
 
 <head>
   <meta charset="utf-8">
-  <title>connexion</title>
+  <title>Connexion</title>
   <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
 
-  <?php include("header.php"); ?>
+ 
 
   <?php include("menu.php"); ?>
 
+ 
+  <div class="gradient">
+
   <form method="POST" action="connexion.php">
-    <label>login</label>
+    
+  <p class="P1">
+    <label>Login</label>
     <input type="text" name="login">
 
-    <label>password</label>
+    <label>Password</label>
     <input type="password" name="password">
     </br>
+    </p>
 
     <input type="submit" name="submit">
+  
   </form>
- 
+  </div>
+
+
 </body>
 
 </html>

@@ -20,18 +20,26 @@ $resultat = mysqli_fetch_all($query);
  
 <body>
 
-    <?php include("header.php");?>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    
     
     <?php include("menu.php"); ?>
 
+    <div class="gradient5">
     
-    <table>
+    <table id="AD">
+        <thead>
     <tr>
-        <td>id</td>
-        <td>Nom</td>
-        <td>Prenom</td>
-        <td>login</td>
+        <th>id</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>login</th>
     </tr>
+    </thead>
+    <tbody>
     <tr>
     <?php foreach ($resultat as list($id,$nom,$prenom,$login))
     {
@@ -40,10 +48,11 @@ $resultat = mysqli_fetch_all($query);
     ?>
         
     </tr>
+    <tbody>
 </table>
+    </div>
 
-
-    <?php include("footer.php"); ?>
+    <?php include("menu2.php"); ?>
     
 </body>
 </html>

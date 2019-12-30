@@ -60,14 +60,19 @@ mysqli_close($connexion);
 
 <body>
 
-<?php include("header.php"); ?>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+
     
 <?php include("menu.php"); ?>
 
-<div align ="center">
 
-<h2>Inscription</h2>
 
+<h1>Inscription</h1>
+
+<div class="gradient3">
 
 <form method ="POST" action = "">
 
@@ -128,7 +133,7 @@ mysqli_close($connexion);
 </form>
 
 </div>
-
+<?php include("menu2.php"); ?>
 
 
 

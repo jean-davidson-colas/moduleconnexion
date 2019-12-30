@@ -34,29 +34,41 @@ else
 </head>
 <?php ?>
 <body>
-<?php include("header.php"); ?>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
     
 <?php include("menu.php"); ?>
 
-    <h1>Bienvenue dans votre espace <?php echo $login;?></h1>
+    <h2>Bienvenue dans votre espace <?php echo $login;?></h2>
 
+    <div class="gradient5">
 <table>
+<thead>
     <tr>
         
-        <td>Nom</td>
-        <td>Prenom</td>
-        <td>login</td>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>login</th>
     </tr>
+<thead>
+    <tbody>
     <tr>
         <td><?php echo $resultat[0][2]; ?></td>
         <td><?php echo $resultat[0][3]; ?></td>
         <td><?php echo $login; ?></td>
     </tr>
+    </tbody>
 </table>
+
+    </div>
+
+    <div class="gradient5">
 
     <form class="formulaire" method="post" action="profil.php">
 
-        <h1>Modifier vos info</h1>
+        <h2>Modifier vos info</h2>
 
         <label for="login">MODIFIER login:</label>
         <input type="text" minlength="5" required name="login" id="login" placeholder="<?php echo $login; ?>">
@@ -69,7 +81,7 @@ else
         
         <input type="submit" name="modif" id="submit" value="Envoyer">
 </form>
-
+    </div>
 <?php
 
 
@@ -94,5 +106,5 @@ echo "votre login a bien été modifier";
 
 ?>
 </body>
-
+<?php include("menu2.php"); ?>
 </html>

@@ -13,15 +13,23 @@ $connexion = mysqli_connect("localhost","root","","moduleconnexion");
     </head>
  
     <body>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
+    
  
-    <?php include("header.php"); ?>
+    
     
     <?php include("menu.php"); ?>
     
+    <h1>Mon super site</h1>
     
+    <div class="gradient4">
     
     <div id="corps">
-        <h1>Mon super site</h1>
+        
         
         <p>
             Bienvenue sur mon super site !<br />
@@ -29,9 +37,10 @@ $connexion = mysqli_connect("localhost","root","","moduleconnexion");
         </p>
     </div>
     
+    </div>
     
     
-    <?php include("footer.php"); ?>
+    <?php include("menu2.php"); ?>
     
     </body>
 </html>
