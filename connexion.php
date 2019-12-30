@@ -60,7 +60,7 @@ if (isset($_POST["submit"])) {
   </form>
   </div>
 
-
+  <?php include("menu2.php"); ?>
 </body>
 
 </html>
